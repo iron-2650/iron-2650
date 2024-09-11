@@ -1,0 +1,863 @@
+
+<!DOCTYPE html><html lang="en-GB"><head><script>
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({"locale": "en-GB", "loggedIn": true, "persona": "FULL_DISCOVERY", "gradYear": 2024, "userId": "1341980", "id": true, "hvm_1": false, "hvm_2": false, "hvm_3": false});
+            window.dataLayer.push({'page_type': "advice"});
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KVV2J4G');
+          </script><script src="https://dssqrheg7wcqy.cloudfront.net/static/js/cloudwatch.cefd9a2631be.js"></script><title>Couch to Coder 2024: Lesson 4</title><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no maximum-scale=1.0"/><link rel="icon" href="https://dssqrheg7wcqy.cloudfront.net/static/img/favicons/favicon.94df52a8f9c0.ico" type="image/vnd.microsoft.icon" size="any" /><link rel="icon" href="https://dssqrheg7wcqy.cloudfront.net/static/img/favicons/favicon.174303943843.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="https://dssqrheg7wcqy.cloudfront.net/static/img/favicons/apple-touch-icon.d69bcb055479.png"><meta property="og:title" content="Bright Network"/><meta property="og:site_name" content="Bright Network"/><meta name="twitter:title" content="Bright Network"/><meta name="twitter:url" content="https://www.brightnetwork.co.uk"/><meta name="facebook-domain-verification" content="gpr2q14dzxf9k7v4o3ai62d1wdl3bf" /><meta name="description"
+        content="In Couch to Coder Lesson 4, you&#x27;ll learn about CSS Layouts. Plus we&#x27;ll introduce you to JavaScript so you can add dynamic behaviour to your site."/><meta name="copyright" content="Bright Network © 2024"/><meta name="dcterms.publisher" content="Bright Network"/><link rel="publisher" href="https://www.brightnetwork.co.uk"/><link rel="stylesheet" href="https://dssqrheg7wcqy.cloudfront.net/static/css/bootstrap.5732ff8ab838.css"><link rel="stylesheet" href="https://dssqrheg7wcqy.cloudfront.net/static/css/tailwind.a9f98b160cf0.css"><link rel="stylesheet" href="https://dssqrheg7wcqy.cloudfront.net/static/css/base.3b953a126c14.css"><link href="https://dssqrheg7wcqy.cloudfront.net/static/css/alert.aef60a6c9663.css" type="text/css" rel="stylesheet"/><link href="https://dssqrheg7wcqy.cloudfront.net/static/css/related_content.e165f47696af.css" media="all" rel="stylesheet"/><link href="https://dssqrheg7wcqy.cloudfront.net/static/css/page.2befff595ca9.css" media="all" rel="stylesheet"/><script>
+  var BrightNetwork = {};
+  BrightNetwork.userIsAuthenticated =  1 ;
+</script><!-- Optional JavaScript --><script src="/jsi18n/"></script><script src="https://dssqrheg7wcqy.cloudfront.net/static/js/vendor.9b7e9b285673.js" defer></script><script src="https://dssqrheg7wcqy.cloudfront.net/static/js/sentry.3c90975dae3b.js" defer></script><script src="https://dssqrheg7wcqy.cloudfront.net/static/js/base.bundle.2cb3aeb2f8ea.js" defer></script><script src="https://dssqrheg7wcqy.cloudfront.net/static/js/navbar.55d04dbe1df7.js" defer></script><script src="https://dssqrheg7wcqy.cloudfront.net/static/js/full-width-page.bundle.8183627b8a20.js" defer></script><script type="text/javascript" src="https://dssqrheg7wcqy.cloudfront.net/static/js/banner-dismissal.d8b67a4bf55d.js" defer></script><link rel="canonical" href="https://www.brightnetwork.co.uk/couch-to-coder-lesson-4/" /></head><body class="page "><div id="site-overlay" class="overlay d-lg-none"></div><div class="container-fluid p-0 m-0 bn-main-container"><div class="mobile-menu__wrapper"><div class="mobile-menu__header"><a href="#" class="mobile-menu__btn-back js-mobile-menu-back" title="menu back"></a><a href="#" class="mobile-menu__btn-close js-mobile-menu-close" title="menu close"></a></div><ul class="mobile-menu navigation"><li class="mobile-menu__item"><a class="mobile-menu__link" href="/" title="home">
+        Home
+      </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Choose a career
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/no-idea-what-do/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            No idea what to do?
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/career-path/results/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            Career path test
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/career-path-guides/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            Career path guides
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/search/?content_types=employers"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            Top graduate employers
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/career-profiles/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            Career profiles
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/academy/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            Academy
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/further-education-hub/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            Further study
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/a-day-in-their-life/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Choose a career"
+          >
+            A day in their life
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Internships
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/internships/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Internships"
+          >
+            Find an internship
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/vacation-schemes/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Internships"
+          >
+            Vacation schemes
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/search/?content_types=employers"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Internships"
+          >
+            Top graduate employers
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/deadline-tracker/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Internships"
+          >
+            Deadline Tracker
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/internship-experience-uk/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Internships"
+          >
+            Internship Experience UK
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Graduate jobs
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-jobs/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Graduate jobs"
+          >
+            Find a graduate job
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/search/?content_types=employers"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Graduate jobs"
+          >
+            Top graduate employers
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/deadline-tracker/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Graduate jobs"
+          >
+            Deadline Tracker
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Industrial placements
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/industrial-placements/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Industrial placements"
+          >
+            Find an industrial placement
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Career advice
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            All advice
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/no-idea-what-do/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            No idea what to do?
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/cv-advice/cv-templates/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            CV advice
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/stem-advice/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            STEM advice
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/aptitude-and-numerical-tests/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Aptitude &amp; numerical tests
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/telephone-video-interviews/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Interviews
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/assessment-centre-advice/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Assessment centres
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/what-is-commercial-awareness/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Commercial awareness
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/key-career-skills/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Core career skills
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/academy/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Academy
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/graduate-career-advice/world-of-work/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Entering the world of work
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/career-path/results/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Career advice"
+          >
+            Career path test
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Events
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/bright-network-events/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Events"
+          >
+            Bright Network events
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/search/?content_types=events"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Events"
+          >
+            Employer events
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/event-highlights/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Events"
+          >
+            Previous event highlights
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Member stories
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/member-success-stories/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Member stories"
+          >
+            Success stories
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/a-day-in-their-life/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Member stories"
+          >
+            A day in their life
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="#">
+      Edit profile
+    </a><ul class="mobile-menu__submenu"><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/basic-info/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Basic info
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/education/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Education
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/equal-opportunities/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Equal opportunities
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/languages/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Languages
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/certificates/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            My certificates
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/cv/edit/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            CV
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/career-path/results/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Career Path
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/password/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Password
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/user-preferences-and-interests/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            My preferences
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/email-preferences/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Email preferences
+          </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link"
+             href="/profile/searches-and-alerts/"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Edit profile"
+          >
+            Searches and alerts
+          </a></li></ul></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="/academy/my-courses/"
+       data-gtm-track="gtm-link-click"
+       data-ga-position="nav"
+       data-ga-label="My courses"
+    >
+      My courses
+    </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="/profile/certificates/"
+       data-gtm-track="gtm-link-click"
+       data-ga-position="nav"
+       data-ga-label="My certificates"
+    >
+      My certificates
+    </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link "
+       href="/career-path/results/"
+       data-gtm-track="gtm-link-click"
+       data-ga-position="nav"
+       data-ga-label="Career path test"
+    >
+      Career path test
+    </a></li><li class="mobile-menu__item"><a class="mobile-menu__link js-mobile-menu-link js-nav-item-got-a-job-cta"
+       href="/got-a-job/"
+       data-gtm-track="gtm-link-click"
+       data-ga-position="nav"
+       data-ga-label="Secured a role?"
+    >
+      Secured a role?
+    </a></li></ul></div><header class="tw-sticky tw-top-0 tw-z-[10000] bn-header"><div class="bn-header-container"><div class="bn-header__inner"><div><button class="js-main-menu-button hamburger d-lg-none" type="button" aria-label="menu"><span></span><span></span><span></span></button><a href="/"
+             title="Home"
+             rel="home"
+             class="logo-main"
+             itemprop="url"
+             data-gtm-track="gtm-link-click"
+             data-ga-position="nav"
+             data-ga-label="Bright Network logo"
+          ><img src="https://dssqrheg7wcqy.cloudfront.net/static/img/logo.f08129df8087.svg" alt="Home" itemprop="logo" width="130" height="46" /></a></div><form class="tw-mb-0 tw-justify-start"
+              action="/search/"
+              method="get" id="id_search_form"
+              accept-charset="UTF-8"><div class="input-group"><input class="tw-w-full tw-py-[0.375rem] tw-px-[0.75rem] tw-font-medium focus:tw-outline-none bn-search-input awesomplete"
+                   id="bn-site-search-box"
+                   role="searchbox"
+                   autocomplete="off"
+                   type="text" name="s"
+                   value=""
+                   placeholder="Search"
+                   maxlength="128"
+                   aria-label="Search input"/><button id="bn-header-search"
+                    class="tw-border-0 !tw-bg-orange-25 hover:!tw-bg-orange-75"
+                    data-gtm-track="gtm-button-click"
+                    data-ga-position="nav"
+                    data-ga-label="aria_search"
+                    aria-label="Search"
+            ><img src="https://dssqrheg7wcqy.cloudfront.net/static/img/icon-search.d0b02e56e7bc.svg" alt="Search" width="22" height="22"></button></div></form><div class="top-right-menu navigation"><ul role="menu" class="tw-flex tw-flex-row tw-list-none tw-justify-end tw-items-center nav-user tw-px-0 tw-mb-0 tw-gap-2 md:tw-gap-4 lg:tw-gap-4"><li class="nav-item tw-hidden lg:tw-block"><a class="nav-link"
+           role="menuitem"
+           href="/"
+           data-gtm-track="gtm-link-click"
+           data-ga-position="nav"
+           data-ga-label="Home"
+        >
+          Home
+        </a></li><li role="none" class="nav-item tw-hidden lg:tw-block tw-group"><button aria-controls="nav-bar-menu-profile" role="menuitem" data-target-menu="nav-bar-menu-profile" class="nav-link tw-py-4 tw-px-2 xl:tw-px-4 !tw-bg-white tw-border-none nav-menu-toggle"
+              id="user-navbar-profile"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              title="Profile"
+              href="#"
+              data-gtm-track="gtm-link-click"
+              data-ga-position="nav"
+              data-ga-label="Profile"
+      >
+        Profile
+      </button><div role="menu" id="nav-bar-menu-profile" data-testid="profile-desktop" class="tw-text-center md:tw-text-start tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-rounded-regular tw-text-sm tw-absolute tw-w-42" aria-labelledby="user-navbar-profile"><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-px-4 tw-py-1"
+               href="/profile/basic-info/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="Edit profile"
+            >
+              Edit profile
+            </a><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-px-4 tw-py-1"
+               href="/academy/my-courses/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="My courses"
+            >
+              My courses
+            </a><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-px-4 tw-py-1"
+               href="/profile/certificates/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="My certificates"
+            >
+              My certificates
+            </a><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-px-4 tw-py-1" href="/career-path/results/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="Career path test"
+            >
+              Career path test
+            </a><form class="no-styling" method="POST" action="/logout/"><input type="hidden" name="csrfmiddlewaretoken" value="yT1ZrJsNBrwa0natYdT26UzVIKr1MB8SFbgLPVkiYpxNhqVTtlaidWW6IG4xoH9X"><button class="tw-w-full tw-text-left tw-border-none tw-bg-[#0b4764] !tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-px-4 tw-py-1" type="submit"
+                      data-gtm-track="gtm-link-click"
+                      data-ga-position="nav"
+                      data-ga-label="Logout"
+              >
+                Logout
+              </button></form></div></li><li class="nav-item tw-hidden lg:tw-block"><a class="nav-link"
+           role="menuitem"
+           href="/deadline-tracker/"
+           data-gtm-track="gtm-link-click"
+           data-ga-position="nav"
+           data-ga-label="Deadline Tracker"
+        >
+          Deadline Tracker
+        </a></li><li class="nav-item tw-hidden lg:tw-block"><a role="menuitem" class="nav-link tw-hidden lg:tw-block js-nav-item-got-a-job-cta"
+           data-gtm-track="gtm-link-click"
+           data-ga-position="nav"
+           data-ga-label="Secured a role?"
+           role="button"
+           href="/got-a-job/">
+          Secured a role?
+        </a></li><li class="nav-item tw-hidden lg:tw-block"><a class="nav-link"
+           role="menuitem"
+           href="https://support.brightnetwork.co.uk"
+           data-gtm-track="gtm-link-click"
+           data-ga-position="nav"
+           data-ga-label="FAQs"
+        >
+          FAQs
+        </a></li><li role="none" class="nav-item lg:tw-hidden tw-group"><a class="nav-link"
+         id="user-mobile-navbar-profile"
+         role="button"
+         aria-haspopup="true"
+         aria-expanded="false"
+         data-bs-toggle="dropdown"
+         data-offset="-30"
+         title="Profile"
+         href="#"
+         data-gtm-track="gtm-link-click"
+         data-ga-position="nav"
+         data-ga-label="Profile"
+      ><span class="nav-user__icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 204.873 204.873"><ellipse cx="101.254" cy="73.43" rx="52.297" ry="67.537"/><path d="M102.439,156.3C45.862,156.3,0,177.224,0,198.98h204.873
+		C204.873,177.224,159.011,156.3,102.439,156.3z"/></svg></span></a><div class="tw-pt-1 tw-absolute"><div data-testid="profile-mobile" class="tw-text-center md:tw-text-start tw-bg-[#0b4764] tw-py-2 tw-rounded-regular tw-relative tw-hidden group-hover:tw-inline-block hover:tw-inline-block tw-text-sm tw-w-37 tw-z-[10000]" aria-labelledby="user-mobile-navbar-profile"><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-block tw-px-4 tw-py-1"
+               href="/profile/basic-info/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="Edit profile"
+            >
+              Edit profile
+            </a><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-block tw-px-4 tw-py-1"
+               href="/academy/my-courses/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="My courses"
+            >
+              My courses
+            </a><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-block tw-px-4 tw-py-1"
+               href="/profile/certificates/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="My certificates"
+            >
+              My certificates
+            </a><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-block tw-px-4 tw-py-1"
+               href="/career-path/results/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="Career path test"
+            >
+              Career path test
+            </a><a class="!tw-text-white hover:!tw-text-[#0b4764] hover:tw-bg-white tw-block tw-px-4 tw-py-1"
+               href="/got-a-job/"
+               data-gtm-track="gtm-link-click"
+               data-ga-position="nav"
+               data-ga-label="Secured a role?"
+            >
+              Secured a role?
+            </a></div></div></li><li role="none" class="nav-item lg:tw-hidden"><a class="nav-link"
+           href="/deadline-tracker/"
+           title="Deadline Tracker"
+           data-gtm-track="gtm-link-click"
+           data-ga-position="nav"
+           data-ga-label="Deadline Tracker"
+           role="menuitem"
+        ><span class="nav-user__icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"><path d="M0,315c0,8.284,6.716,15,15,15h300c8.285,0,15-6.716,15-15V120H0V315z"/><path d="M315,30h-85V15c0-8.284-6.715-15-15-15c-8.283,0-15,6.716-15,15v15h-70V15c0-8.284-6.716-15-15-15
+		s-15,6.716-15,15v15H15C6.716,30,0,36.716,0,45v45h330V45C330,36.716,323.285,30,315,30z"/></svg></span></a></li><li role="none" class="nav-item lg:tw-hidden"><a class="nav-link"
+           href="https://support.brightnetwork.co.uk"
+           title="FAQs"
+           data-gtm-track="gtm-link-click"
+           data-ga-position="nav"
+           data-ga-label="FAQs"
+           role="menuitem"
+        ><span class="nav-user__icon"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M122.88,61.44C122.88,27.51,95.37,0,61.44,0C27.51,0,0,27.51,0,61.44c0,33.93,27.51,61.44,61.44,61.44 C95.37,122.88,122.88,95.37,122.88,61.44L122.88,61.44z M68.79,74.58H51.3v-1.75c0-2.97,0.32-5.39,1-7.25 c0.68-1.87,1.68-3.55,3.01-5.1c1.34-1.54,4.35-4.23,9.01-8.11c2.48-2.03,3.73-3.88,3.73-5.56c0-1.71-0.51-3.01-1.5-3.95 c-1-0.93-2.51-1.4-4.54-1.4c-2.19,0-3.98,0.73-5.4,2.16c-1.43,1.44-2.34,3.97-2.74,7.56l-17.88-2.22c0.61-6.57,3-11.86,7.15-15.85 c4.17-4.02,10.55-6.01,19.14-6.01c6.7,0,12.1,1.4,16.21,4.19c5.6,3.78,8.38,8.82,8.38,15.1c0,2.62-0.73,5.14-2.16,7.56 c-1.44,2.44-4.39,5.39-8.85,8.88c-3.09,2.48-5.05,4.44-5.86,5.93C69.19,70.24,68.79,72.19,68.79,74.58L68.79,74.58z M50.68,79.25 h18.76v16.53H50.68V79.25L50.68,79.25z"/></g></svg></span></a></li><li role="none" class="nav-item lg:tw-hidden"><form class="no-styling" method="POST" action="/logout/"><input type="hidden" name="csrfmiddlewaretoken" value="yT1ZrJsNBrwa0natYdT26UzVIKr1MB8SFbgLPVkiYpxNhqVTtlaidWW6IG4xoH9X"><button class="tw-border-none tw-bg-white tw-font-light hover:tw-text-orange-400" type="submit"
+                  data-testid="logout"
+                  data-gtm-track="gtm-link-click"
+                  data-ga-position="nav"
+                  data-ga-label="Logout"
+          >
+            Logout
+          </button></form></li></ul></div></div></div><div class="bn-header-container tw-hidden lg:tw-block"><nav id="desktop-main-menu-container"><ul role="menubar" class="tw-text-center tw-list-none tw-flex tw-flex-row lg:tw-text-start lg:tw-p-0 lg:tw-m-0 tw-items-center"><li role="none" class="tw-group"><button aria-controls="nav-bar-menu-choose-a-career" aria-expanded="false" aria-haspopup="true" role="menuitem" data-target-menu="nav-bar-menuchoose-a-career" class="!tw-text-grey-600 tw-py-4 tw-px-2 xl:tw-px-4  !tw-bg-white tw-border-none nav-menu-toggle"
+                  id="navbar-choose-a-career"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="Choose a career"
+                  href="#">
+            Choose a career
+          </button><div role="menu" id="nav-bar-menuchoose-a-career" class="tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-px-0 tw-rounded-b-regular tw-text-sm tw-absolute nav-menu"
+               aria-labelledby="navbar-choose-a-career" tabindex="-1"><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/no-idea-what-do/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="No idea what to do?"
+              >
+                No idea what to do?
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/career-path/results/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Career path test"
+              >
+                Career path test
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/career-path-guides/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Career path guides"
+              >
+                Career path guides
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/search/?content_types=employers"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Top graduate employers"
+              >
+                Top graduate employers
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/career-profiles/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Career profiles"
+              >
+                Career profiles
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/academy/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Academy"
+              >
+                Academy
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/further-education-hub/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Further study"
+              >
+                Further study
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/a-day-in-their-life/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="A day in their life"
+              >
+                A day in their life
+              </a></div></li><li role="none" class="tw-group"><button aria-controls="nav-bar-menu-internships" aria-expanded="false" aria-haspopup="true" role="menuitem" data-target-menu="nav-bar-menuinternships" class="!tw-text-grey-600 tw-py-4 tw-px-2 xl:tw-px-4  !tw-bg-white tw-border-none nav-menu-toggle"
+                  id="navbar-internships"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="Internships"
+                  href="#">
+            Internships
+          </button><div role="menu" id="nav-bar-menuinternships" class="tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-px-0 tw-rounded-b-regular tw-text-sm tw-absolute nav-menu"
+               aria-labelledby="navbar-internships" tabindex="-1"><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/internships/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Find an internship"
+              >
+                Find an internship
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/vacation-schemes/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Vacation schemes"
+              >
+                Vacation schemes
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/search/?content_types=employers"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Top graduate employers"
+              >
+                Top graduate employers
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/deadline-tracker/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Deadline Tracker"
+              >
+                Deadline Tracker
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/internship-experience-uk/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Internship Experience UK"
+              >
+                Internship Experience UK
+              </a></div></li><li role="none" class="tw-group"><button aria-controls="nav-bar-menu-graduate-jobs" aria-expanded="false" aria-haspopup="true" role="menuitem" data-target-menu="nav-bar-menugraduate-jobs" class="!tw-text-grey-600 tw-py-4 tw-px-2 xl:tw-px-4  !tw-bg-white tw-border-none nav-menu-toggle"
+                  id="navbar-graduate-jobs"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="Graduate jobs"
+                  href="#">
+            Graduate jobs
+          </button><div role="menu" id="nav-bar-menugraduate-jobs" class="tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-px-0 tw-rounded-b-regular tw-text-sm tw-absolute nav-menu"
+               aria-labelledby="navbar-graduate-jobs" tabindex="-1"><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-jobs/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Find a graduate job"
+              >
+                Find a graduate job
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/search/?content_types=employers"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Top graduate employers"
+              >
+                Top graduate employers
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/deadline-tracker/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Deadline Tracker"
+              >
+                Deadline Tracker
+              </a></div></li><li role="none" class="tw-group"><button aria-controls="nav-bar-menu-industrial-placements" aria-expanded="false" aria-haspopup="true" role="menuitem" data-target-menu="nav-bar-menuindustrial-placements" class="!tw-text-grey-600 tw-py-4 tw-px-2 xl:tw-px-4  !tw-bg-white tw-border-none nav-menu-toggle"
+                  id="navbar-industrial-placements"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="Industrial placements"
+                  href="#">
+            Industrial placements
+          </button><div role="menu" id="nav-bar-menuindustrial-placements" class="tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-px-0 tw-rounded-b-regular tw-text-sm tw-absolute nav-menu"
+               aria-labelledby="navbar-industrial-placements" tabindex="-1"><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/industrial-placements/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Find an industrial placement"
+              >
+                Find an industrial placement
+              </a></div></li><li role="none" class="tw-group"><button aria-controls="nav-bar-menu-career-advice" aria-expanded="false" aria-haspopup="true" role="menuitem" data-target-menu="nav-bar-menucareer-advice" class="!tw-text-grey-600 tw-py-4 tw-px-2 xl:tw-px-4  !tw-bg-white tw-border-none nav-menu-toggle"
+                  id="navbar-career-advice"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="Career advice"
+                  href="#">
+            Career advice
+          </button><div role="menu" id="nav-bar-menucareer-advice" class="tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-px-0 tw-rounded-b-regular tw-text-sm tw-absolute nav-menu"
+               aria-labelledby="navbar-career-advice" tabindex="-1"><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="All advice"
+              >
+                All advice
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/no-idea-what-do/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="No idea what to do?"
+              >
+                No idea what to do?
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/cv-advice/cv-templates/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="CV advice"
+              >
+                CV advice
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/stem-advice/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="STEM advice"
+              >
+                STEM advice
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/aptitude-and-numerical-tests/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Aptitude &amp; numerical tests"
+              >
+                Aptitude &amp; numerical tests
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/telephone-video-interviews/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Interviews"
+              >
+                Interviews
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/assessment-centre-advice/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Assessment centres"
+              >
+                Assessment centres
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/what-is-commercial-awareness/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Commercial awareness"
+              >
+                Commercial awareness
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/key-career-skills/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Core career skills"
+              >
+                Core career skills
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/academy/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Academy"
+              >
+                Academy
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/graduate-career-advice/world-of-work/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Entering the world of work"
+              >
+                Entering the world of work
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/career-path/results/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Career path test"
+              >
+                Career path test
+              </a></div></li><li role="none" class="tw-group"><button aria-controls="nav-bar-menu-events" aria-expanded="false" aria-haspopup="true" role="menuitem" data-target-menu="nav-bar-menuevents" class="!tw-text-grey-600 tw-py-4 tw-px-2 xl:tw-px-4  !tw-bg-white tw-border-none nav-menu-toggle"
+                  id="navbar-events"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="Events"
+                  href="#">
+            Events
+          </button><div role="menu" id="nav-bar-menuevents" class="tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-px-0 tw-rounded-b-regular tw-text-sm tw-absolute nav-menu"
+               aria-labelledby="navbar-events" tabindex="-1"><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/bright-network-events/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Bright Network events"
+              >
+                Bright Network events
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/search/?content_types=events"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Employer events"
+              >
+                Employer events
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/event-highlights/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Previous event highlights"
+              >
+                Previous event highlights
+              </a></div></li><li role="none" class="tw-group"><button aria-controls="nav-bar-menu-member-stories" aria-expanded="false" aria-haspopup="true" role="menuitem" data-target-menu="nav-bar-menumember-stories" class="!tw-text-grey-600 tw-py-4 tw-px-2 xl:tw-px-4  !tw-bg-white tw-border-none nav-menu-toggle"
+                  id="navbar-member-stories"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="Member stories"
+                  href="#">
+            Member stories
+          </button><div role="menu" id="nav-bar-menumember-stories" class="tw-invisible group-hover:tw-visible tw-flex tw-flex-col tw-bg-[#0b4764] tw-py-2 tw-px-0 tw-rounded-b-regular tw-text-sm tw-absolute nav-menu"
+               aria-labelledby="navbar-member-stories" tabindex="-1"><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/member-success-stories/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="Success stories"
+              >
+                Success stories
+              </a><a role="menuitem" class="tw-text-white hover:tw-text-[#0b4764] hover:tw-bg-white tw-w-full tw-px-4 tw-py-2"
+                 href="/a-day-in-their-life/"
+                 data-gtm-track="gtm-link-click"
+                 data-ga-position="nav"
+                 data-ga-label="A day in their life"
+              >
+                A day in their life
+              </a></div></li></ul></nav></div></header><div class="page-alert-container"><div class="alert alert-success javascript"></div><div class="alert alert-info javascript"></div><div class="alert alert-warning javascript"></div><div class="alert alert-danger javascript"></div></div><div class="tw-bg-orange tw-m-0 tw-py-4 tw-flex tw-min-h-[100px] tw-relative bn-site-banner" data-banner-id=6><div class="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-justify-between bn-header-container tw-m-auto"><div class="tw-flex tw-w-full tw-justify-start tw-align-center tw-pb-6 md:tw-pb-0 tw-gap-4 md:tw-gap-0"><div class="tw-justify-end tw-items-center tw-flex"><img class="tw-h-auto tw-max-h-[40px] md:tw-max-h-[70px] tw-max-w-[60px] md:tw-max-w-[100px] tw-object-contain" src="https://d8qb5cxd9qhkd.cloudfront.net/banner_svgs/BN_logo_white.svg" alt="" width="300" height="200"></div><div class="tw-text-black tw-flex md:tw-mx-8 tw-items-center"><div><p class="tw-my-auto lg:tw-mb-2 lg:tw-mt-0 tw-text-sm md:tw-text-xl tw-mr-12 sm:tw-mr-0 tw-font-semibold">Meet your future employer at FESTIVAL 2024</p><p class="md:tw-mb-0 tw-text-sm tw-hidden lg:tw-block">
+            Join the UK’s no.1 careers event to network, upskill and win prizes with the world’s top employers.
+          </p></div></div></div><div class="tw-flex tw-items-center tw-whitespace-nowrap tw-w-full md:tw-max-w-fit"><a class="bn-btn tw-inline-flex tw-items-center tw-w-full md:tw-max-w-fit tw-cursor-pointer tw-text-sm tw-font-bold tw-justify-center tw-py-4 tw-px-8 tw-bg-white hover:tw-bg-[#e6e6e6] tw-text-[#242424] hover:!tw-text-[#242424] tw-rounded-regular" href="https://www.brightnetwork.co.uk/bright-network-events/bright-network-festival-2024-am?utm_source=website&amp;utm_medium=banner&amp;utm_campaign=festival2024_am">Apply now</a></div></div><div class="bn-dismiss tw-flex tw-justify-center tw-items-center tw-border tw-border-solid tw-w-6 tw-h-6 tw-cursor-pointer tw-rounded-full tw-absolute tw-top-2 tw-right-2 tw-border-black"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" class="tw-fill-black"><path fill-rule="nonzero" d="M12 10.824L22.58.244a.831.831 0 0 1 1.177 1.175L13.176 12l10.58 10.58a.831.831 0 0 1-1.175 1.177L12 13.176 1.42 23.756a.831.831 0 0 1-1.177-1.175L10.824 12 .244 1.42A.831.831 0 0 1 1.418.242L12 10.824z"/></svg></div></div><main class="main"><div class="container tw-mt-4"><div class="row justify-content-center"><div class="col-lg-10"><ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href=/ title=Home "><span itemprop="name">Home</span></a><meta itemprop="position" content=1 /></li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href=/couch-to-coder-lesson-4/ title=Couch to Coder: Lesson 4 "><span itemprop="name">Couch to Coder: Lesson 4</span></a><meta itemprop="position" content=2 /></li></ol></div></div></div><div class="container"><div class="pb-5 pt-4"><div class="row justify-content-center"><div class="col-lg-10"><article><h1 class="tw-font-bold tw-text-pretty">
+      Couch to Coder: Lesson 4
+    </h1><div class="position-relative"><div class="pt-2 article-content"><div class="!tw-mb-12"><p data-block-key="rbiye">Welcome to Lesson 4 of Couch to Coder 2024! Whether you're taking part because you dream of a career in tech or you simply want to upskill and explore the world of coding, we're excited to get stuck into the next 5 weeks of learning with you.</p><p data-block-key="fi48n">During this week's session, we'll uncover everything you need to know about CSS Layouts – from FlexBox to Grid and more. We’ll introduce you to JavaScript so you can add dynamic behaviour to your site, empowering you to create responsive layouts.</p><p data-block-key="5n8cb">And remember to refer to the PDFs linked in the email throughout the lesson!</p></div><div class="!tw-mb-12"><iframe allow="autoplay; fullscreen; picture-in-picture; clipboard-write" frameborder="0" height="240" sandbox="allow-scripts allow-same-origin allow-downloads" src="https://player.vimeo.com/video/1005504263?h=c6b48a682d&amp;app_id=122963" title="Couch to Coder Week 4" width="426"></iframe></div></div></div></article></div><div class="col-lg-10"></div></div></div></div></main><footer class="bn-footer"><div class="bn-footer__wrapper container"><nav class="bn-footer__nav"><div><a href="https://workfor.brightnetwork.co.uk/" >
+          Careers - work for us
+        </a><a href="/about-us/our-contact-details/" >Get in touch</a><a href="/terms-and-conditions/" >Terms and conditions</a><a href="/about-us/anti-slavery-policy/" >Anti-slavery policy</a></div><div><a href="/about-us/membership-guidelines/" >Community guidelines</a><a href="/privacy-policy/" >Privacy policy</a><a href="/browse/" >Browse site</a><a href="https://www.brightnetwork.de" >Bright Network Germany</a></div><div><a href="/about-us/">About us</a><div class="bn-footer__copyright">Bright Network &copy; 2024</div></div></nav></div></footer></div></body></html>
